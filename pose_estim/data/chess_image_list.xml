@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<opencv_storage>
+  <images>
+    <value type="str">"../data/chess/ch0.jpg"</value>
+    <value type="str">"../data/chess/ch1.jpg"</value>
+    <value type="str">"../data/chess/ch2.jpg"</value>
+    <value type="str">"../data/chess/ch3.jpg"</value>
+    <value type="str">"../data/chess/ch4.jpg"</value>
+    <value type="str">"../data/chess/ch5.jpg"</value>
+    <value type="str">"../data/chess/ch6.jpg"</value>
+    <value type="str">"../data/chess/ch7.jpg"</value>
+    <value type="str">"../data/chess/ch8.jpg"</value>
+    <value type="str">"../data/chess/ch9.jpg"</value>
+    <value type="str">"../data/chess/ch10.jpg"</value>
+    <value type="str">"../data/chess/ch11.jpg"</value>
+    <value type="str">"../data/chess/ch12.jpg"</value>
+    <value type="str">"../data/chess/ch13.jpg"</value>
+    <value type="str">"../data/chess/ch15.jpg"</value>
+    <value type="str">"../data/chess/ch14.jpg"</value>
+    <value type="str">"../data/chess/ch16.jpg"</value>
+    <value type="str">"../data/chess/ch17.jpg"</value>
+    <value type="str">"../data/chess/ch18.jpg"</value>
+  </images>
+</opencv_storage>

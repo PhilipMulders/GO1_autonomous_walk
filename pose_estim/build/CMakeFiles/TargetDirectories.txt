@@ -1,0 +1,3 @@
+/home/philip/open_cv/self_exampl/cpp_examp/pose_estim/build/CMakeFiles/pose_estim.dir
+/home/philip/open_cv/self_exampl/cpp_examp/pose_estim/build/CMakeFiles/edit_cache.dir
+/home/philip/open_cv/self_exampl/cpp_examp/pose_estim/build/CMakeFiles/rebuild_cache.dir

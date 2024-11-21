@@ -1,0 +1,3 @@
+/home/philip/open_cv/self_exampl/cpp_examp/cam_calib/build/CMakeFiles/cam_calib.dir
+/home/philip/open_cv/self_exampl/cpp_examp/cam_calib/build/CMakeFiles/edit_cache.dir
+/home/philip/open_cv/self_exampl/cpp_examp/cam_calib/build/CMakeFiles/rebuild_cache.dir

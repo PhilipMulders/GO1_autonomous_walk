@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.10)
+
+# Set the project name and version
+project(PoseEstimation)
+
+# Find OpenCV package
+find_package(OpenCV REQUIRED)
+
+# Add the executable
+add_executable(pose_estimation_project main.cpp)
+
+# Link OpenCV to your project
+target_link_libraries(pose_estimation_project ${OpenCV_LIBS})
