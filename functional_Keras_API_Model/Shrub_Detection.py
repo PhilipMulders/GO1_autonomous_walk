@@ -3,7 +3,6 @@ import cv2
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras import Model
-# from tensorflow.keras.models import Model
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.layers import Input, Dense, Flatten, Conv2D, MaxPooling2D, BatchNormalization
 from tensorflow.keras.optimizers import Adam
@@ -227,7 +226,7 @@ def predict_and_show(model, images, labels, image_names):
 
 def main():
     image_dir = "data/shrubs"
-    label_file = "data/labels.txt"
+    label_file = "data/labels.csv"
 
     images, labels, image_names = load_images_and_labels(image_dir, label_file)
     model, X_test, y_test = train_model(images, labels)
