@@ -225,7 +225,7 @@ def predict_and_show(model, images, labels, image_names):
 
 
 def main():
-    image_dir = "data/shrubs"
+    image_dir = "data/frames"
     label_file = "data/labels.csv"
 
     images, labels, image_names = load_images_and_labels(image_dir, label_file)
