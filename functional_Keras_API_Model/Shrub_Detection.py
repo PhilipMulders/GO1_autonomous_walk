@@ -131,9 +131,11 @@ def train_model(images, labels):
 
     return model, X_test, y_test
 
-
 def grad_cam(model, img, class_index, layer_name="conv2d"):
+    # Ensure class_index is a valid binary index (0 or 1)
     class_index = int(class_index)
+    if class_index not in [0, 1]:
+        raise ValueError(f"Invalid class index: {class_index}. It must be either 0 or 1 for binary classification.")
 
     grad_model = Model(
         inputs=model.input, 
@@ -146,7 +148,9 @@ def grad_cam(model, img, class_index, layer_name="conv2d"):
         inputs = tf.convert_to_tensor(img_tensor, dtype=tf.float32)
         tape.watch(inputs)
         conv_outputs, predictions = grad_model(inputs)
-        loss = predictions[:, class_index]  # Class-specific loss
+        
+        # In binary classification, predictions will be a scalar, no need to slice it
+        loss = predictions[:, class_index]  # Class-specific loss (either index 0 or 1)
 
     grads = tape.gradient(loss, conv_outputs)
 
@@ -156,10 +160,9 @@ def grad_cam(model, img, class_index, layer_name="conv2d"):
     conv_outputs = conv_outputs[0]  # Remove batch dimension
     heatmap = np.mean(conv_outputs * pooled_grads.numpy(), axis=-1)
 
-    heatmap = np.maximum(heatmap, 0) # strict positive mask
-    heatmap /= np.max(heatmap)
+    heatmap = np.maximum(heatmap, 0)  # Ensure all values are positive
+    heatmap /= np.max(heatmap)  # Normalize to [0, 1]
     return heatmap
-
 
 # Visualization
 def visualize_grad_cam(model, img, class_index, layer_name="conv2d"):
