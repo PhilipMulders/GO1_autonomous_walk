@@ -71,7 +71,7 @@ def build_model():
     x = MaxPooling2D(pool_size=(2, 2))(x)
 
     # Second convolutional block
-    x = Conv2D(128, (3, 3), activation='relu', padding='same')(x)
+    x = Conv2D(64, (3, 3), activation='relu', padding='same')(x)
     x = BatchNormalization()(x)
     x = MaxPooling2D(pool_size=(2, 2))(x)
 
